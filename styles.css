@@ -129,6 +129,7 @@ table {
   background-color: var(--deepShade);
   color: var(--whiteShade);
 }
+
 .booksContainer tbody .delete {
   background-color: var(--warmShade);
   border-radius: 2px;
@@ -140,7 +141,6 @@ table {
   text-decoration: none;
   text-transform: capitalize;
 }
-
 
 .main-nav {
   display: flex;
