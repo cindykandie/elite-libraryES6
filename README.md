@@ -29,15 +29,16 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Book App] <a name="about-project"></a>
+# 📖 [Elite Library] <a name="about-project"></a>
 
-> - In this project, WE will built a basic website that allows users to add/remove books from a list.
+> - In this project, We will built a basic website that allows users to add/remove books from a list.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 - HTML
 - CSS
 - Javascript
+- ES6
 
 ### Key Features <a name="key-features"></a>
 
@@ -94,7 +95,7 @@ Example commands:
 
 Install this project with:
 
-- to install locally run git clone https://github.com/Sammy3000/Book-app-ES6.git
+- to install locally run git clone https://github.com/cindykandie/elitelibrary-ES6/.git
 - open the cloned directory with VSCode
 - Install live server extension for VSCode
 - Right click on the index.html and select open with live servers
@@ -110,11 +111,11 @@ Install this project with:
 ## 👥 Author <a name="author"></a>
 
 > This is a solo project.
-> **Towett Sammy**
+> **Cindy Kandie**
 
-- GitHub: [@sam](https://github.com/Sammy3000)
-- Twitter: [@towettsam](https://twitter.com/sammy15375658)
-- LinkedIn: [@towettSammy](https://www.linkedin.com/in/towett-sammy-43476024a/)
+- GitHub: [@cindykandie](https://github.com/cindykandie)
+- Twitter: [@cindykandie](https://twitter.com/cindykandie)
+- LinkedIn: [@cindykandie](https://www.linkedin.com/in/cindykandie/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -144,7 +145,7 @@ If you like this project feel free to use it and I hope it helps you in your jou
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank my bootcamp Microverse for this project and for granting me the knowledge to do it.
+I would like to thank my Training body at Microverse for this project and for granting me the knowledge to do it. I would also like to appreciate my code reviewer and coding partners
 
 <!-- LICENSE -->
 
