@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Hind+Madurai:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --warmShade: #f2eba6;
+  --deepShade: #180029;
+  --whiteShade: #f6f6f7;
+  --font1: 'Cabin', sans-serif;
+  --font2: 'Hind Madurai', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: var(--font2);
+}
+
+.main-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+h1 {
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.form-group {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form-class {
+  flex-direction: column;
+  align-items: center;
+  display: none;
+}
+
+.form-heading {
+  font-family: sans-serif;
+  font-style: normal;
+  padding: 2rem 0;
+}
+
+table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-control {
+  width: 100%;
+  max-width: 400px;
+  min-width: 300px;
+  margin: 5px auto;
+  padding: 5px;
+  outline: none;
+  border: 2px solid var(--deepShade);
+  border-radius: 3px;
+  height: 40px;
+  transition: all 0.5s ease-in;
+}
+
+.form-control:focus {
+  background-color: var(--warmShade);
+}
+
+.btn {
+  border-radius: 2px;
+  color: black;
+  font-weight: bold;
+  align-self: center;
+  padding: 0.4rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  width: 50px;
+  box-shadow: 1px 1px 2px var(--deepShade);
+  font-family: var(--font1);
+  margin-right: 0;
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+}
+
+.btn:hover {
+  box-shadow: 1px 1px 2px var(--warmShade);
+  background-color: var(--deepShade);
+  color: var(--whiteShade);
+}
+
+::placeholder {
+  text-align: start;
+  color: grey;
+  text-transform: capitalize;
+  font-size: larger;
+  font-family: var(--font2);
+}
+
+.booksContainer {
+  border: 3px solid black;
+  border-radius: 2px;
+  border-collapse: collapse;
+  margin: 1.5rem auto;
+  font-size: 0.9em;
+}
+
+.booksContainer tbody tr:nth-of-type(odd) {
+  background-color: var(--warmShade);
+}
+
+#book-list tr,
+#book-list td {
+  padding: 0.4rem;
+}
+
+.delete:hover {
+  box-shadow: 1px 1px 2px var(--warmShade);
+  background-color: var(--deepShade);
+  color: var(--whiteShade);
+}
+
+.booksContainer tbody .delete {
+  background-color: var(--warmShade);
+  border-radius: 2px;
+  border: 1px solid var(--deepShade);
+  color: var(--deepShade);
+  font-weight: bold;
+  margin-left: 200px;
+  padding: 0.2rem;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.main-nav {
+  display: flex;
+  width: 95%;
+  margin: 1rem auto;
+  border: 2px solid var(--deepShade);
+  justify-content: space-between;
+  height: 3rem;
+  padding: 0 1rem;
+  font-family: sans-serif;
+}
+
+.name {
+  line-height: 3rem;
+  font-weight: 700;
+}
+
+.menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu li a {
+  line-height: 3rem;
+  text-decoration: none;
+  color: var(--deepShade);
+  cursor: pointer;
+  font-family: var(--font1);
+}
+
+.menu li a:hover {
+  color: var(--warmShade);
+  text-decoration: underline;
+  text-decoration-color: var(--deepShade);
+}
+
+.date {
+  display: flex;
+  width: 95%;
+  margin: 0.2rem auto;
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: right;
+}
+
+.footer {
+  position: absolute;
+  width: 95%;
+  bottom: 1rem;
+  left: 2%;
+  right: 2%;
+  margin: 0 auto;
+  height: 3rem;
+  border: 2px solid var(--deepShade);
+}
+
+.footer-content {
+  line-height: 3rem;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.contact {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.1rem;
+}
