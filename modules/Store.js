@@ -13,6 +13,7 @@ export default class Store {
     const books = Store.getBooks();
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
+    console.log('iko')
   }
 
   static removeBook = (title) => {

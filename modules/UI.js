@@ -1,4 +1,3 @@
-
 export default class Store {
   static getBooks() {
     let books;
@@ -18,7 +17,6 @@ export default class Store {
 
   static removeBook(author) {
     const books = Store.getBooks();
-
     books.forEach((book, index) => {
       if (book.author === author) {
         books.splice(index, 1);
@@ -40,13 +38,16 @@ export class UI {
 
   static addBookToList(book) {
     const list = document.querySelector('#bookList');
+    
 
     const row = document.createElement('tr');
     row.classList.add('row');
 
     const createTitle = document.createElement('th');
+    const createBy = document.createElement('th');
     const createAuthor = document.createElement('th');
     createTitle.innerHTML = book.title;
+    createBy.innerText = 'by';
     createAuthor.innerHTML = book.author;
     const createButton = document.createElement('th');
     const removeBtn = document.createElement('button');
@@ -56,6 +57,7 @@ export class UI {
     createButton.appendChild(removeBtn);
 
     row.appendChild(createTitle);
+    row.appendChild(createBy);
     row.appendChild(createAuthor);
     row.appendChild(createButton);
     list.appendChild(row);
