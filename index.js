@@ -1,7 +1,11 @@
 import Book from './modules/book.js';
-import Store from './modules/store.js';
-import { UI } from './modules/UI.js';
-import { bookList, addList,contactList, allSection,inputSection,contactSection, linksAdd, linksAll, linksContact } from './modules/variables.js';
+//import Store from './modules/store.js';
+import { UI, Store } from './modules/UI.js';
+import {
+  contactSection, linksAdd, linksAll, linksContact,
+
+  bookList, addList, contactList, allSection, inputSection,
+} from './modules/variables.js';
 import displayTime from './modules/time.js';
 
 document.addEventListener('DOMContentLoaded', UI.displayBooks);
@@ -9,20 +13,16 @@ document.querySelector('#enter').addEventListener('submit', (e) => {
   e.preventDefault();
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
-  if (title === '' || author === '') {
-    alert('Please fill in all fields');
-  } else {
-    const book = new Book(title, author);
-    UI.addBookToList(book);
-    Store.addBook(book);
-    UI.clearfields();
-  }
+  const book = new Book(title, author);
+  UI.addBookToList(book);
+  Store.addBook(book);
+  UI.clearfields();
 });
 
 document.querySelector('#bookList').addEventListener('click', (e) => {
   UI.deleteBook(e.target);
-  Store.removeBook(e.target.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.textContent);
-  
+  Store.removeBook(e.target.parentElement.previousElementSibling
+    .previousElementSibling.previousElementSibling.textContent);
 });
 
 bookList.addEventListener('click', (e) => {

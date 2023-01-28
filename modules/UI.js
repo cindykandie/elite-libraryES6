@@ -1,5 +1,5 @@
-export default class Store {
-  static getBooks() {
+export class Store {
+  static getBooks = () => {
     let books;
     if (localStorage.getItem('books') === null) {
       books = [];
@@ -9,16 +9,16 @@ export default class Store {
     return books;
   }
 
-  static addBook(book) {
+  static addBook = (book) => {
     const books = Store.getBooks();
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
   }
 
-  static removeBook(author) {
+  static removeBook = (title) => {
     const books = Store.getBooks();
     books.forEach((book, index) => {
-      if (book.author === author) {
+      if (book.title === title) {
         books.splice(index, 1);
       }
     });
@@ -28,7 +28,7 @@ export default class Store {
 }
 
 // UI class: Handles UI Tasks
-
+//import Store from "./store";
 export class UI {
   static displayBooks() {
     const books = Store.getBooks();

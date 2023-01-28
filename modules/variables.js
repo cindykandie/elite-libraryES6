@@ -7,4 +7,3 @@ export const contactSection = document.querySelector('.contact');
 export const linksAdd = document.querySelector('.add-link');
 export const linksAll = document.querySelector('.list-link');
 export const linksContact = document.querySelector('.contact-link');
-
