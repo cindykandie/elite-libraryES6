@@ -33,11 +33,13 @@ h1 {
   font-weight: 700;
   text-align: center;
   margin-top: 2rem;
+  text-decoration: underline;
 }
 
-.form-group {
+form#enter {
   margin: 1rem 0;
-  display: flex;
+  display: none;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
@@ -56,11 +58,19 @@ h1 {
 
 table {
   display: flex;
+  width: 75%;
   align-items: center;
   justify-content: center;
 }
 
-.form-control {
+tbody {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+input {
   width: 100%;
   max-width: 400px;
   min-width: 300px;
@@ -73,7 +83,7 @@ table {
   transition: all 0.5s ease-in;
 }
 
-.form-control:focus {
+input:focus {
   background-color: var(--warmShade);
 }
 
@@ -115,19 +125,21 @@ table {
   font-size: 0.9em;
 }
 
+tr {
+  display: flex;
+  gap: 30px;
+  justify-content: space-evenly;
+}
+
 .booksContainer tbody tr:nth-of-type(odd) {
   background-color: var(--warmShade);
 }
 
-#book-list tr,
-#book-list td {
-  padding: 0.4rem;
-}
-
-.delete:hover {
+.remove-btn:hover {
   box-shadow: 1px 1px 2px var(--warmShade);
   background-color: var(--deepShade);
   color: var(--whiteShade);
+  margin-right: auto;
 }
 
 .booksContainer tbody .delete {
@@ -190,20 +202,20 @@ table {
   text-align: right;
 }
 
-.footer {
+footer {
   position: absolute;
-  width: 95%;
+  width: 98%;
   bottom: 1rem;
-  left: 2%;
-  right: 2%;
+  left: 0%;
+  right: 0;
   margin: 0 auto;
   height: 3rem;
   border: 2px solid var(--deepShade);
 }
 
-.footer-content {
+footer h3 {
   line-height: 3rem;
-  text-align: left;
+  text-align: center;
   padding: 0 20px;
 }
 

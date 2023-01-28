@@ -38,13 +38,13 @@
 - HTML
 - CSS
 - Javascript
-- ES6
+- ES6 and ES6 modules
 
 ### Key Features <a name="key-features"></a>
 
 - **Display the current date below the navigation bar**
 - **Can add and delete books]**
-- **Stores data in local storage**
+- **Stores dynamidata in local storage**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -52,7 +52,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://sammy3000.github.io/Book-app-ES6/)
+- [Live Demo Link](https://cindykandie.github.io/elite-libraryES6/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -87,7 +87,7 @@ Example commands:
 
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone git@github.com/cindykandie/elitelibrary-ES6/.git
 ```
 --->
 
@@ -114,7 +114,7 @@ Install this project with:
 > **Cindy Kandie**
 
 - GitHub: [@cindykandie](https://github.com/cindykandie)
-- Twitter: [@cindykandie](https://twitter.com/cindykandie)
+- Twitter: [@cindykandie](https://twitter.com/cindy_kandie)
 - LinkedIn: [@cindykandie](https://www.linkedin.com/in/cindykandie/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

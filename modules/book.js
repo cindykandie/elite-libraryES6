@@ -1,4 +1,4 @@
-// Book class: Represents a book
+// Book Class:
 export default class Book {
   constructor(title, author) {
     this.title = title;

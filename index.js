@@ -1,70 +1,58 @@
 import Book from './modules/book.js';
+import Store from './modules/store.js';
 import UI from './modules/UI.js';
-import Store from './modules/Store.js';
+import {
+  contactSection, linksAdd, linksAll, linksContact,
 
-// Event:Display books
-document.addEventListener('DOMContentLoaded', () => {
-  UI.displayBooks();
-});
+  bookList, addList, contactList, allSection, inputSection,
+} from './modules/variables.js';
+import displayTime from './modules/time.js';
 
-// Event:Add a book
-document.querySelector('#book-form').addEventListener('submit', (e) => {
-  // prevent default
+document.addEventListener('DOMContentLoaded', UI.displayBooks);
+document.querySelector('#enter').addEventListener('submit', (e) => {
   e.preventDefault();
-  // get form values
-  const tittle = document.querySelector('#title').value;
+  const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
-
-  // Validate
-
-  // Instantiate book
-  const book = new Book(tittle, author);
-
-  // Add book to UI
+  const book = new Book(title, author);
   UI.addBookToList(book);
-
-  // Add book to store
   Store.addBook(book);
-
-  // Clear fields
-  UI.clearFields();
+  UI.clearfields();
 });
 
-// Event:Remove book from UI
-document.querySelector('#book-list').addEventListener('click', (e) => {
+document.querySelector('#bookList').addEventListener('click', (e) => {
   UI.deleteBook(e.target);
-
-  // Remove book from Store
-  Store.removeBook(
-    e.target.parentElement.previousElementSibling.previousElementSibling
-      .previousElementSibling.textContent,
-  );
+  Store.removeBook(e.target.parentElement.previousElementSibling
+    .previousElementSibling.previousElementSibling.textContent);
 });
 
-// Navigation Section
-const newlist = document.querySelector('.list-menu');
-const add = document.querySelector('.add-new');
-const contact = document.querySelector('.contact-menu');
-const contactPage = document.querySelector('.contact');
-const formSection = document.querySelector('.form-class');
-const addedBooks = document.querySelector('.booksContainer');
-const bookHead = document.querySelector('.book-head');
+bookList.addEventListener('click', (e) => {
+  e.preventDefault();
+  allSection.style.display = 'flex';
+  inputSection.style.display = 'none';
+  contactSection.style.display = 'none';
+  linksAll.style.color = 'blue';
+  linksAdd.style.color = 'black';
+  linksContact.style.color = 'black';
+});
 
-add.addEventListener('click', () => {
-  formSection.style.display = 'flex';
-  addedBooks.style.display = 'none';
-  contactPage.style.display = 'none';
-  bookHead.style.display = 'none';
+addList.addEventListener('click', (e) => {
+  e.preventDefault();
+  allSection.style.display = 'none';
+  inputSection.style.display = 'flex';
+  contactSection.style.display = 'none';
+  linksAdd.style.color = 'blue';
+  linksAll.style.color = 'black';
+  linksContact.style.color = 'black';
 });
-newlist.addEventListener('click', () => {
-  formSection.style.display = 'none';
-  contactPage.style.display = 'none';
-  addedBooks.style.display = 'block';
-  bookHead.style.display = 'block';
+
+contactList.addEventListener('click', (e) => {
+  e.preventDefault();
+  allSection.style.display = 'none';
+  inputSection.style.display = 'none';
+  contactSection.style.display = 'flex';
+  linksContact.style.color = 'blue';
+  linksAdd.style.color = 'black';
+  linksAll.style.color = 'black';
 });
-contact.addEventListener('click', () => {
-  contactPage.style.display = 'flex';
-  formSection.style.display = 'none';
-  addedBooks.style.display = 'none';
-  bookHead.style.display = 'none';
-});
+
+setInterval(displayTime, 1000);

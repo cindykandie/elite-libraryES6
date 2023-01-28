@@ -1,35 +1,47 @@
-import Store from './Store.js';
-import displayTime from './dateTime.js';
-
-export default class UI {
-  static displayBooks = () => {
+import Store from './store.js';
+// UI class: Handles UI Tasks
+class UI {
+  static displayBooks() {
     const books = Store.getBooks();
+
     books.forEach((book) => UI.addBookToList(book));
-    displayTime();
   }
 
-  static addBookToList = (book) => {
-    const list = document.querySelector('#book-list');
+  static addBookToList(book) {
+    const list = document.querySelector('#bookList');
+
     const row = document.createElement('tr');
-    row.innerHTML = ` 
-      <tr>
-      <td>${book.title}</td>
-      <td>by</td>
-      <td>${book.author}</td>
-      <td><a class='delete btn'>remove</a></td>
-      <tr>
-      `;
+    row.classList.add('row');
+
+    const createTitle = document.createElement('th');
+    const createBy = document.createElement('th');
+    const createAuthor = document.createElement('th');
+    createTitle.innerHTML = book.title;
+    createBy.innerText = 'by';
+    createAuthor.innerHTML = book.author;
+    const createButton = document.createElement('th');
+    const removeBtn = document.createElement('button');
+    removeBtn.classList.add('remove-btn');
+    removeBtn.type = 'submit';
+    removeBtn.innerText = 'Remove';
+    createButton.appendChild(removeBtn);
+
+    row.appendChild(createTitle);
+    row.appendChild(createBy);
+    row.appendChild(createAuthor);
+    row.appendChild(createButton);
     list.appendChild(row);
   }
 
-  static deleteBook = (el) => {
-    if (el.classList.contains('delete')) {
+  static deleteBook(el) {
+    if (el.classList.contains('remove-btn')) {
       el.parentElement.parentElement.remove();
     }
   }
 
-  static clearFields = () => {
+  static clearfields() {
     document.querySelector('#title').value = '';
     document.querySelector('#author').value = '';
   }
 }
+export default UI;
