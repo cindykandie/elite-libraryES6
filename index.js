@@ -1,6 +1,6 @@
 import Book from './modules/book.js';
-//import Store from './modules/store.js';
-import { UI, Store } from './modules/UI.js';
+import Store from './modules/store.js';
+import UI from './modules/UI.js';
 import {
   contactSection, linksAdd, linksAll, linksContact,
 
